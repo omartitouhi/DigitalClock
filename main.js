@@ -28,5 +28,14 @@ $(document).ready(function (){
         min = min < 10 ? "0" + min :min;
         sec = sec < 10 ? "0" + sec :sec;
 
+        //set the variable to the span
+        $("#hours").text(hours);
+        $("#min").text(min);
+        $("#sec").text(sec);
+        $("#period").text(session);
+
+        //change the time in every second
+        setTimeout(showTime,1000);
     }
+    showTime();
 })
